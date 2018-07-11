@@ -369,11 +369,12 @@ Object.assign(target, source1, source2);
 target // {a:1, b:2, c:3}
 ```
 
-如果只有一个参数，`Object.assign`会直接返回该参数。
+`Object.assign`直接返回第一个参数。
 
 ```javascript
-const obj = {a: 1};
-Object.assign(obj) === obj // true
+const target = {a:1}
+const source = {a:2,b:1}
+Object.assign(target,source)===target // true
 ```
 
 如果该参数不是对象，则会先转成对象，然后返回。
